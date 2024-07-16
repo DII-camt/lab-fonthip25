@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+    </head>
+
+    <body>
+        <script>
+            //PUT to update data
+fetch('https://jsonplaceholder.typicode.com/posts/1', {
+method: 'PUT',
+body: JSON.stringify({
+id: 1,
+title: 'foo',
+body: 'bar',
+userId: 1,
+}),
+headers: {
+'Content-type': 'application/json; charset=UTF-8',
+},
+})
+.then((response) => response.json())
+.then((json) => console.log(json));
+
+        
+        </script>
+    </body>
+</html>
